@@ -1,0 +1,14 @@
+<div *ngIf="product != undefined" class="product-card">
+  <app-image-loader
+    class="product-img"
+    [src]="product.photo"
+    [alt]="product.name"
+  ></app-image-loader>
+  <div class="product-info">
+    <span class="product-name">{{ product.name}}</span>
+    <span class="product-price">{{ product.price | currency: 'EUR' }}</span>
+  </div>
+  <div class="product-footer">
+    <button>Adicionar ao carrinho</button>
+  </div>
+</div>

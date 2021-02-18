@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
+import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductListRoutingModule } from './product-list-routing.module';
 import { ProductListComponent } from './product-list.component';
-
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
-  declarations: [ProductListComponent],
+  declarations: [ProductListComponent, ProductCardComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     ProductListRoutingModule
   ]
 })

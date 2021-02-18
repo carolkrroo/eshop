@@ -1,0 +1,8 @@
+<app-loading *ngIf="!loaded"></app-loading>
+<img
+  class="image"
+  [hidden]="!loaded"
+  (load)="loaded = true"
+  [src]="src"
+  [alt]="alt"
+/>

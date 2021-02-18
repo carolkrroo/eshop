@@ -6,6 +6,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 1;
 
   h1 {
     font-size: 28px;
@@ -28,4 +30,8 @@
     z-index: 1;
     text-align: center;
   }
+}
+
+main {
+  padding-top: 56px;
 }
