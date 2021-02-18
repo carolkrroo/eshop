@@ -1,0 +1,16 @@
+<div class="header">
+  <a [routerLink]="['/']">
+    <h1>e-shop</h1>
+  </a>
+
+  <a class="button icon-button" routerLink="/cart">
+    <i class="material-icons">shopping_cart</i>
+    <span class="cart-count-badge">
+      1
+    </span>
+  </a>
+</div>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
