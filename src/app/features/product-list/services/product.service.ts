@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { Product } from '../interfaces/product.interfaces';
+import { SnackbarService } from 'src/app/shared/components/snackbar/snackbar.service';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,10 @@ export class ProductService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private snackbarService: SnackbarService,
+  ) { }
 
     /** GET products from the server */
     getProducts(): Observable<Product[]> {
@@ -36,7 +40,7 @@ export class ProductService {
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
 
-      // TODO: better job of transforming error for user consumption
+      this.snackbarService.show('Erro ao carregar lista de produtos', 'danger');
 
       // Let the app keep running by returning an empty result.
       return of(result as T);

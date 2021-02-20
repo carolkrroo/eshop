@@ -1,0 +1,5 @@
+<div *ngIf="snackbar.show"
+[ngClass]="['snackbar-wrap', snackbar.type]"
+>
+  <p class="snackbar-text">{{ snackbar.message }}</p>
+</div>

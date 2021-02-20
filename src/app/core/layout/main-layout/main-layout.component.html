@@ -6,7 +6,7 @@
   <a class="button icon-button" routerLink="/cart">
     <i class="material-icons">shopping_cart</i>
     <span class="cart-count-badge">
-      1
+      {{ quantity }}
     </span>
   </a>
 </div>
@@ -14,3 +14,5 @@
 <main class="container">
   <router-outlet></router-outlet>
 </main>
+
+<app-snackbar></app-snackbar>

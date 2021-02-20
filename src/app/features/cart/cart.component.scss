@@ -1,0 +1,92 @@
+.empty-cart {
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: fit-content;
+}
+
+.item-img {
+  width: 100px;
+}
+
+.item-name {
+  text-align: left;
+  color: #0e5386;
+  font-weight: 500;
+  line-height: 15px;
+  position: relative;
+  width: 45%;
+  font-size: 15px;
+}
+
+.item-quantity {
+  text-align: center;
+}
+
+.item-price {
+  text-align: right;
+  vertical-align: middle;
+  position: relative;
+  width: 17%;
+  color: #2d383e;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+table {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 11px;
+}
+
+table thead th {
+  text-transform: uppercase;
+  color: #2d383e;
+  line-height: 14px;
+  height: 30px;
+  vertical-align: middle;
+  border: none;
+  text-align: center;
+  padding-left: 10px;
+}
+
+table thead th:first-of-type {
+  padding-left: 0;
+  text-align: left;
+}
+
+table thead th:last-of-type {
+  padding-right: 0;
+  text-align: right;
+}
+
+table,
+tr {
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  border-collapse: collapse;
+}
+table,
+thead tr:first-of-type {
+  border: none;
+}
+table,
+tbody tr:last-of-type {
+  border: none;
+}
+
+table tbody td {
+  padding: 10px;
+}
+
+table tbody td:first-of-type {
+  padding-left: 0;
+}
+
+table tbody td:last-of-type {
+  padding-right: 0;
+}
